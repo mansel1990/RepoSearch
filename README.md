@@ -4,7 +4,7 @@ App to search through git hub repo
 
 ## Installation
 
-After you pull the code -
+Clone the project -
 Run **npm install** in the main directory to install required dependency
 
 ## Running the project
