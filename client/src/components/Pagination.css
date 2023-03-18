@@ -1,0 +1,28 @@
+.bottom-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem 0rem;
+  align-items: center;
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.goto-input-eff {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 22px;
+  position: relative;
+  width: 100px;
+  padding: 5px;
+}
+
+.goto-input-eff:focus {
+  border: 0px solid #38b261;
+  border-bottom: 3px solid #38b261;
+  transition: 0.4s;
+  outline: none;
+}

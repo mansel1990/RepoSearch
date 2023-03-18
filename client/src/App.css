@@ -1,0 +1,33 @@
+* {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 15px;
+  user-select: none;
+}
+.error {
+  color: red;
+}
+h1 {
+  color: #38b261;
+}
+.search-bar {
+  font-size: 20px;
+  margin: 2rem 0;
+}
+.input-eff {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 22px;
+  position: relative;
+}
+
+.input-eff:focus {
+  border: 0px solid #38b261;
+  border-bottom: 3px solid #38b261;
+  transition: 0.4s;
+  outline: none;
+}
