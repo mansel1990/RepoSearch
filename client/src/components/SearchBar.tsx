@@ -14,15 +14,17 @@ function SearchBar({ setSearchValue }: Props) {
     debouncedSendRequest(value);
   };
 
-  const sendRequest = useCallback((value: string) => {
-    console.log("Changed value:", value);
-    if (value) {
-      setSearchValue(value);
-      setError("");
-    } else {
-      setError("Search box cannot be empty");
-    }
-  }, []);
+  const sendRequest = useCallback(
+    (value: string) => {
+      if (value) {
+        setSearchValue(value);
+        setError("");
+      } else {
+        setError("Search box cannot be empty");
+      }
+    },
+    [setSearchValue]
+  );
 
   // memoize the debounce call with useMemo
   const debouncedSendRequest = useMemo(() => {

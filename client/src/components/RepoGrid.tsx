@@ -4,7 +4,6 @@ import DataGrid from "react-data-grid";
 import "react-data-grid/lib/styles.css";
 import Pagination from "./Pagination";
 import Spinner from "./Spinner";
-import { isError } from "lodash";
 
 type Props = {
   searchValue: string;
@@ -23,7 +22,6 @@ function RepoGrid({ searchValue }: Props) {
   }, [searchValue]);
 
   useEffect(() => {
-    console.log("currentPage ==> ", currentPage);
     const getData = async () => {
       setIsLoading(true);
       const queryParams = new URLSearchParams([
@@ -45,7 +43,6 @@ function RepoGrid({ searchValue }: Props) {
         setError("");
       })
       .catch((err) => {
-        console.log("Error", err);
         setError(err.response.data.message);
         setIsLoading(false);
       });
